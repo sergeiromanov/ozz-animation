@@ -92,7 +92,7 @@ class Allocator {
 #define OZZ_DELETE(x_allocator, x_object)              \
                                                        \
   do {                                                 \
-    if (void(0), (x_object)) {                         \
+    if (void(0), (x_object) != NULL) {                 \
       ozz::memory::internal::CallDestructor(x_object); \
       (x_allocator)->Deallocate(x_object);             \
     }                                                  \
@@ -105,6 +105,8 @@ class Allocator {
 namespace internal {
 template <typename _Ty>
 void CallDestructor(_Ty* _object) {
+  (void)_object;  // prevents from false "unreferenced parameter" warning when
+                  // _Ty has no explicit destructor.
   _object->~_Ty();
 }
 }  // namespace internal
