@@ -90,15 +90,15 @@ class Allocator {
 // OZZ_NEW and the same ozz::memory::Allocator.
 // OZZ_DELETE conforms with standard operator delete specifications.
 #define OZZ_DELETE(x_allocator, x_object)              \
-  \
-do {                                                   \
-    if (x_object) {                                    \
+                                                       \
+  do {                                                 \
+    if (void(0), (x_object)) {                         \
       ozz::memory::internal::CallDestructor(x_object); \
       (x_allocator)->Deallocate(x_object);             \
     }                                                  \
   }                                                    \
-  \
-while(0)
+                                                       \
+  while (0)
 
 // Function used internally to deduce object type and thus be able to call its
 // destructor.
