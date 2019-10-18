@@ -92,13 +92,13 @@ class Allocator {
 #define OZZ_DELETE(x_allocator, x_object)              \
                                                        \
   do {                                                 \
-    if (void(0), (x_object) != NULL) {                 \
+    if ((x_object) != NULL) {                          \
       ozz::memory::internal::CallDestructor(x_object); \
       (x_allocator)->Deallocate(x_object);             \
     }                                                  \
   }                                                    \
                                                        \
-  while (0)
+  while (void(0), 0)
 
 // Function used internally to deduce object type and thus be able to call its
 // destructor.
