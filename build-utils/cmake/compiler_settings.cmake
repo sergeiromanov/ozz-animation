@@ -139,11 +139,11 @@ message(STATUS "---------------------------------------------------------")
 
 #----------------------------------------------
 # Modifies output directory for all executables
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ".")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ".")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ".")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ".")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ".")
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ".")
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ".")
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ".")
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ".")
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ".")
 
 #-------------------------------
 # Set a postfix for output files
