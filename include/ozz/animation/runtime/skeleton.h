@@ -108,7 +108,7 @@ class Skeleton {
   void Save(ozz::io::OArchive& _archive) const;
   void Load(ozz::io::IArchive& _archive, uint32_t _version);
 
- private:
+ public:
   // Disables copy and assignation.
   Skeleton(Skeleton const&);
   void operator=(Skeleton const&);
